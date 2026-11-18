@@ -1,0 +1,40 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Times de Futebol</title>
+</head>
+<body>
+
+    <h1>Exercício JavaScript - Times</h1>
+
+    <script>
+        const times = [
+            {time:"São Paulo",torcida:17,titulos:56},
+            {time:"Palmeiras",torcida:15,titulos:55},
+            {time:"Santos",torcida:10,titulos:54},
+            {time:"Corinthians",torcida:30,titulos:53},
+        ];
+
+        const maioresTorcidas = times.filter((t) => t.torcida > 15);
+        console.log(maioresTorcidas);
+
+        const menoresTorcidas = times.filter((t) => t.torcida < 15);
+        console.log(menoresTorcidas);
+
+        const dobrarTorcida = times.map((t) => t.torcida * 2);
+        console.log(dobrarTorcida);
+
+        console.log(times.length);
+
+        const tamanhoLista = times.reduce((cont) => cont + 1, 0);
+        console.log(tamanhoLista);
+
+        const totalTorcidas = times.reduce((s, t) => s + t.torcida, 0);
+        console.log(totalTorcidas);
+    </script>
+
+</body>
+</html>
